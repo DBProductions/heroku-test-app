@@ -1,13 +1,24 @@
-const express = require('express');
-const app = express();
+'use strict';
+const restify = require('restify');
+
+let handle = (req, res, next) => {
+    res.charSet('utf-8');
+    res.contentType = 'json';
+    res.json({msg: 'Hello Heroku ' + ENVIRONMENT + '!'})
+    return next();
+};
 
 const PORT = process.env.PORT || 3000;
-const ENVIRONMENT = process.env.NODE_ENV;
+const ENVIRONMENT = process.env.NODE_ENV || 'local';
 
-app.get('/', (req, res) => {
-    res.send('Hello Heroku ' + ENVIRONMENT + '!')
-})
+const server = restify.createServer({
+    name: 'heroku-test-app'
+});
 
-app.listen(PORT, () => {
-    console.log('Example app listening on port ' + PORT + '!')
-})
+server.use(restify.bodyParser({ mapParams: false }));
+
+server.get('/', handle);
+
+server.listen(PORT, () => {
+    console.log('Listening on port: %s', PORT);
+});

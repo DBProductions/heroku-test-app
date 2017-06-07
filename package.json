@@ -12,6 +12,6 @@
   "author": "DBProductions",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3"
+    "restify": "4.3.0"
   }
 }
