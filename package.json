@@ -7,12 +7,14 @@
     "node": "7.0.0"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "mocha test"
   },
   "author": "DBProductions",
   "license": "ISC",
   "dependencies": {
-    "restify": "4.3.0"
+    "restify": "4.3.0",
+    "restify-router": "^0.4.2"
   },
   "devDependencies": {
     "hippie": "0.5.1",
