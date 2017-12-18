@@ -10,6 +10,7 @@ before_script:
   - "export COVERALLS_REPO_TOKEN=PtsfxOXNTnovjlROIvVQ7xLi8auoZK7Na"
 
 script:
+  - npm run lint
   - npm test
 
 after_success:

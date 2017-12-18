@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha test",
+    "lint": "node ./node_modules/eslint/bin/eslint.js index.js lib/",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "coveralls": "3.0.0",
+    "eslint": "4.13.1",
     "hippie": "0.5.1",
     "istanbul": "0.4.5",
     "mocha": "4.0.1",
