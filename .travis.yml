@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 8.0.0
+  - 9.5.0
 
 before_install:
   - npm install
@@ -14,4 +14,4 @@ script:
   - npm test
 
 after_success:
-- npm run coveralls
+  - npm run coveralls
