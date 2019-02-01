@@ -16,7 +16,8 @@
   "author": "DBProductions",
   "license": "ISC",
   "dependencies": {
-    "fastify": "1.13.4"
+    "fastify": "1.13.4",
+    "mongoose": "^5.4.9"
   },
   "devDependencies": {
     "coveralls": "3.0.0",
