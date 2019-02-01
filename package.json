@@ -4,7 +4,7 @@
   "description": "Heroku test application",
   "main": "index.js",
   "engines": {
-    "node": "8.0.0"
+    "node": "10.0.0"
   },
   "scripts": {
     "start": "node index.js",
@@ -16,8 +16,7 @@
   "author": "DBProductions",
   "license": "ISC",
   "dependencies": {
-    "restify": "6.3.4",
-    "restify-router": "0.5.0"
+    "fastify": "^1.13.4",
   },
   "devDependencies": {
     "coveralls": "3.0.0",
